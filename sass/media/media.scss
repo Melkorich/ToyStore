@@ -67,6 +67,12 @@
         font-size: 31px;
         margin: 0 auto 35px;
     }
+
+    .media-modal__body {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+
 }
 
 
@@ -257,6 +263,10 @@
         align-items: start;
     }
 
+    .media-modal__body {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -298,6 +308,22 @@
 
     .webflow__title {
         margin: 0 auto 20px;
+    }
+
+    .modal__title {
+        margin-bottom: 30px;
+    }
+
+    .modal__item:not(:last-child) {
+        padding-right: 15px;
+    }
+
+    .modal__item {
+        min-width: 160px !important;
+    }
+
+    .media-modal__body {
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
@@ -385,5 +411,10 @@
     .footer__bottom-item:not(:last-child)::after {
         display: none;
 
+    }
+
+    .media-modal__body {
+        grid-template-columns: repeat(2, 1fr);
+        overflow: auto;
     }
 }
