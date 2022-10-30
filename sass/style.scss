@@ -1,0 +1,31 @@
+//base
+@import './base/reset';
+@import './base/base';
+
+
+//blocks
+@import './blocks/header';
+@import './blocks/footer';
+@import './blocks/menu';
+@import './blocks/hero';
+@import './blocks/offer';
+@import './blocks/goods';
+@import './blocks/subscribe';
+@import './blocks/socials';
+@import './blocks/burger-menu';
+
+//modal
+@import './modals/modal';
+
+//slider-swiper
+@import './swiper/swiper';
+
+
+//sections
+@import './sections/story';
+@import './sections/webflow';
+@import './sections/media';
+
+
+//media
+@import './media/media.scss';

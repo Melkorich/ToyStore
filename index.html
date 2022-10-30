@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Varela+Round&display=swap" rel="stylesheet"
+        type="text/css">
+    <link href="./css/lity.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <title>Toy Store Landing</title>
+</head>
+
+<body>
+
+    <div class="modal hidden">
+        <h3 class="modal__title">
+            Here are some toys available
+        </h3>
+
+        <ul class="modal__list">
+            <li class="modal__item">
+                <img class="modal__img" src="./images/instagram/1.jpg" alt="">
+                <button class="modal__btn">add to cart</button>
+            </li>
+            <li class="modal__item">
+                <img class="modal__img" src="./images/instagram/2.jpg" alt="">
+                <button class="modal__btn">add to cart</button>
+            </li>
+            <li class="modal__item">
+                <img class="modal__img" src="./images/instagram/3.jpg" alt="">
+                <button class="modal__btn">add to cart</button>
+            </li>
+            <li class="modal__item">
+                <img class="modal__img" src="./images/instagram/4.jpg" alt="">
+                <button class="modal__btn">add to cart</button>
+            </li>
+            <li class="modal__item">
+                <img class="modal__img" src="./images/instagram/5.jpg" alt="">
+                <button class="modal__btn">add to cart</button>
+            </li>
+        </ul>
+    </div>
+    <div class="modal__overlay hidden"></div>
+
+
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-inner">
+                    <ul class="header__top-links">
+                        <li class="header__top-link">
+                            <a href="tel:+12139745898">Call Us: +1 213 974-5898</a>
+                        </li>
+                        <li class="header__top-link">
+                            <span>Email:</span>
+                            <a href="mailto:toystore@template.com">toystore@template.com</a>
+                        </li>
+                    </ul>
+                    <ul class="header__socials socials">
+                        <li class="socials__item">
+                            <a class="socials__link" href="#">
+                                <svg width="14" height="12" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M13.75 1.67606C13.2533 1.89544 12.7195 2.04506 12.1593 2.11088C12.7308 1.76831 13.1701 1.2255 13.3765 0.579187C12.8427 0.895875 12.2493 1.1265 11.6187 1.25194C11.113 0.713625 10.3924 0.375 9.59706 0.375C8.06763 0.375 6.82619 1.61644 6.82619 3.14587C6.82619 3.36356 6.85037 3.5745 6.89875 3.77644C4.59644 3.66225 2.55512 2.55919 1.1905 0.882375C0.950875 1.29131 0.81475 1.76831 0.81475 2.27569C0.81475 3.23587 1.30244 4.08413 2.04719 4.58081C1.59269 4.56506 1.16631 4.44244 0.792813 4.23319C0.792813 4.24669 0.792813 4.25738 0.792813 4.26863C0.792813 5.61131 1.74625 6.73181 3.01412 6.98438C2.78125 7.04794 2.53713 7.08338 2.28456 7.08338C2.10681 7.08338 1.93075 7.06594 1.76369 7.03275C2.11525 8.13356 3.13956 8.93344 4.35006 8.95762C3.40281 9.70012 2.2075 10.1417 0.9115 10.1417C0.687063 10.1417 0.467688 10.1287 0.25 10.1023C1.47625 10.8892 2.93088 11.3482 4.49519 11.3482C9.59031 11.3482 12.3769 7.12725 12.3769 3.4665C12.3769 3.34781 12.3724 3.22688 12.3679 3.10819C12.9085 2.71725 13.3787 2.22956 13.75 1.67606Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="socials__link" href="#">
+                                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.94478 13.75V8.84644H10.6077L10.8559 6.98208H8.94478V5.77469C8.94478 5.22426 9.09424 4.85139 9.89293 4.85139H10.9375V3.13352C10.7611 3.11133 10.144 3.0625 9.44096 3.0625C7.97253 3.0625 6.98019 3.95473 6.98019 5.57494V6.98208H5.3125V8.84644H6.97979L6.97655 13.75H1.375C0.759766 13.75 0.25 13.2402 0.25 12.625V1.375C0.25 0.759766 0.759766 0.25 1.375 0.25H12.625C13.2402 0.25 13.75 0.759766 13.75 1.375V12.625C13.75 13.2402 13.2402 13.75 12.625 13.75H8.94478Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="socials__link" href="#">
+                                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0.25 4.1457C0.25 1.99416 1.99415 0.25 4.1457 0.25H9.8543C12.0058 0.25 13.75 1.99415 13.75 4.1457V9.8543C13.75 12.0058 12.0059 13.75 9.8543 13.75H4.1457C1.99416 13.75 0.25 12.0059 0.25 9.8543V4.1457ZM1.47198 4.26189V9.73811C1.47198 11.2812 2.72107 12.528 4.26189 12.528H9.73811C11.2812 12.528 12.528 11.2789 12.528 9.73811V4.26189C12.528 2.71876 11.2789 1.47198 9.73811 1.47198H4.26189C2.71876 1.47198 1.47198 2.72107 1.47198 4.26189ZM7 10.4332C5.1039 10.4332 3.56681 8.8961 3.56681 7C3.56681 5.1039 5.1039 3.56681 7 3.56681C8.8961 3.56681 10.4332 5.1039 10.4332 7C10.4332 8.8961 8.8961 10.4332 7 10.4332ZM7 9.21121C8.22122 9.21121 9.21121 8.22122 9.21121 7C9.21121 5.77878 8.22122 4.78879 7 4.78879C5.77878 4.78879 4.78879 5.77878 4.78879 7C4.78879 8.22122 5.77878 9.21121 7 9.21121ZM10.5496 4.2069C10.0996 4.2069 9.73491 3.84216 9.73491 3.39224C9.73491 2.94232 10.0996 2.57759 10.5496 2.57759C10.9995 2.57759 11.3642 2.94232 11.3642 3.39224C11.3642 3.84216 10.9995 4.2069 10.5496 4.2069Z" />
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="socials__link" href="#">
+                                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_1_40" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                        width="14" height="14">
+                                        <path
+                                            d="M7 0.25C3.27124 0.25 0.25 3.27124 0.25 7C0.25 9.86084 2.02979 12.302 4.54126 13.2864C4.48193 12.7524 4.427 11.9329 4.56323 11.3484C4.68628 10.8232 5.35425 7.99316 5.35425 7.99316C5.35425 7.99316 5.1543 7.58887 5.1543 6.99121C5.1543 6.05298 5.69702 5.35205 6.37378 5.35205C6.94946 5.35205 7.22852 5.78491 7.22852 6.30347C7.22852 6.88354 6.85938 7.74927 6.66821 8.55127C6.51001 9.22363 7.00659 9.77075 7.66797 9.77075C8.86768 9.77075 9.79053 8.50513 9.79053 6.6792C9.79053 5.06421 8.63037 3.93481 6.97144 3.93481C5.05102 3.93481 3.92383 5.37402 3.92383 6.86377C3.92383 7.44385 4.14795 8.06567 4.427 8.40405C4.48193 8.46997 4.48853 8.5293 4.47315 8.59741C4.42041 8.81055 4.30835 9.26978 4.28638 9.36206C4.25562 9.4873 4.1875 9.51367 4.06006 9.45215C3.21631 9.06104 2.68897 7.82837 2.68897 6.8374C2.68897 4.70825 4.23584 2.75269 7.14941 2.75269C9.4917 2.75269 11.311 4.42041 11.311 6.65283C11.311 8.97754 9.84326 10.8496 7.80859 10.8496C7.12524 10.8496 6.48145 10.4958 6.26172 10.0762C6.26172 10.0762 5.92334 11.3638 5.83984 11.6802C5.68823 12.2668 5.27734 13.0007 5.00049 13.449C5.6333 13.6445 6.30347 13.75 7 13.75C10.7288 13.75 13.75 10.7288 13.75 7C13.75 3.27124 10.7288 0.25 7 0.25Z" />
+                                    </mask>
+                                    <g mask="url(#mask0_1_40)">
+                                        <path
+                                            d="M7 0.25C3.27124 0.25 0.25 3.27124 0.25 7C0.25 9.86084 2.02979 12.302 4.54126 13.2864C4.48193 12.7524 4.427 11.9329 4.56323 11.3484C4.68628 10.8232 5.35425 7.99316 5.35425 7.99316C5.35425 7.99316 5.1543 7.58887 5.1543 6.99121C5.1543 6.05298 5.69702 5.35205 6.37378 5.35205C6.94946 5.35205 7.22852 5.78491 7.22852 6.30347C7.22852 6.88354 6.85938 7.74927 6.66821 8.55127C6.51001 9.22363 7.00659 9.77075 7.66797 9.77075C8.86768 9.77075 9.79053 8.50513 9.79053 6.6792C9.79053 5.06421 8.63037 3.93481 6.97144 3.93481C5.05102 3.93481 3.92383 5.37402 3.92383 6.86377C3.92383 7.44385 4.14795 8.06567 4.427 8.40405C4.48193 8.46997 4.48853 8.5293 4.47315 8.59741C4.42041 8.81055 4.30835 9.26978 4.28638 9.36206C4.25562 9.4873 4.1875 9.51367 4.06006 9.45215C3.21631 9.06104 2.68897 7.82837 2.68897 6.8374C2.68897 4.70825 4.23584 2.75269 7.14941 2.75269C9.4917 2.75269 11.311 4.42041 11.311 6.65283C11.311 8.97754 9.84326 10.8496 7.80859 10.8496C7.12524 10.8496 6.48145 10.4958 6.26172 10.0762C6.26172 10.0762 5.92334 11.3638 5.83984 11.6802C5.68823 12.2668 5.27734 13.0007 5.00049 13.449C5.6333 13.6445 6.30347 13.75 7 13.75C10.7288 13.75 13.75 10.7288 13.75 7C13.75 3.27124 10.7288 0.25 7 0.25Z" />
+                                    </g>
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="socials__link" href="#">
+                                <svg width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_1_26" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                        width="16" height="12">
+                                        <path
+                                            d="M8 0.375C10.1184 0.375 11.9904 0.594938 13.1328 0.762C14.0778 0.900375 14.84 1.61194 15.0138 2.55469C15.1629 3.35906 15.3125 4.53469 15.3125 6C15.3125 7.46531 15.1606 8.64094 15.0138 9.44531C14.84 10.3881 14.0778 11.1019 13.1328 11.238C11.9859 11.4051 10.1071 11.625 8 11.625C5.89288 11.625 4.01413 11.4051 2.86719 11.238C1.92219 11.1019 1.16 10.3881 0.986187 9.44531C0.839375 8.64319 0.6875 7.46981 0.6875 6C0.6875 4.53019 0.839375 3.35681 0.986187 2.55469C1.16 1.61194 1.92219 0.900375 2.86719 0.762C4.00962 0.594938 5.88163 0.375 8 0.375ZM6.3125 2.78306V9.21694L7.15625 8.74219L11.0938 6.49219L11.9375 6L11.0938 5.50781L7.15625 3.25781L6.3125 2.78306Z" />
+                                    </mask>
+                                    <g mask="url(#mask0_1_26)">
+                                        <path
+                                            d="M8 0.375C10.1184 0.375 11.9904 0.594938 13.1328 0.762C14.0778 0.900375 14.84 1.61194 15.0138 2.55469C15.1629 3.35906 15.3125 4.53469 15.3125 6C15.3125 7.46531 15.1606 8.64094 15.0138 9.44531C14.84 10.3881 14.0778 11.1019 13.1328 11.238C11.9859 11.4051 10.1071 11.625 8 11.625C5.89288 11.625 4.01413 11.4051 2.86719 11.238C1.92219 11.1019 1.16 10.3881 0.986187 9.44531C0.839375 8.64319 0.6875 7.46981 0.6875 6C0.6875 4.53019 0.839375 3.35681 0.986187 2.55469C1.16 1.61194 1.92219 0.900375 2.86719 0.762C4.00962 0.594938 5.88163 0.375 8 0.375ZM6.3125 2.78306V9.21694L7.15625 8.74219L11.0938 6.49219L11.9375 6L11.0938 5.50781L7.15625 3.25781L6.3125 2.78306Z" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__nav">
+            <div class="container">
+                <nav class="menu">
+                    <a class="logo" href="#">ToStore</a>
+                    <button class="menu__burger" type="button">
+                        <span></span>
+                    </button>
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Catalog
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Delivery
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                About
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="menu__user">
+                        <button class="menu__cart">
+                            <span>Cart</span>
+                            <img src="./images/cart.png" alt="user cart">
+                        </button>
+                        <span class="menu__number">0</span>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero__intro">
+            <span>Say Hello to ToyStore!</span>
+            <h1 class="title">
+                Free Ecommerce Template for Webflow
+            </h1>
+            <button class="hero__link open-modal" type="button">
+                Open Catalog
+            </button>
+        </div>
+        <a class="scroll" href="#offers">
+            <img src="./images/scroll.png" alt="scroll">
+        </a>
+    </div>
+
+    <div class="main">
+
+        <div class="offers" id="offers">
+            <div class="container">
+                <div class="offers__inner">
+                    <div class="offers__item">
+                        <div class="offers__image">
+                            <img class="offers__img" src="./images/offer-1.png" alt="image">
+                        </div>
+                        <div class="offers__content">
+                            <h4 class="offers__title">
+                                Stuffed Animals
+                            </h4>
+                            <a class="offers__Link" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="offers__item">
+                        <div class="offers__content">
+                            <h4 class="offers__title">
+                                Stuffed Animals
+                            </h4>
+                            <a class="offers__Link" href="#">
+                                Shop Now
+                            </a>
+                        </div>
+                        <div class="offers__image">
+                            <img class="offers__img" src="./images/offer-2.png" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="goods">
+            <div class="container">
+                <div class="goods__first">
+                    <div class="goods__nav">
+                        <h3 class="goods__title title-3">
+                            Stuffed Animals
+                        </h3>
+                        <a class="goods__link" href="#">
+                            See All Toys
+                        </a>
+                    </div>
+                    <div class="goods__swiper swiper">
+                        <div class="goods__items swiper-wrapper">
+                            <div class="goods__item swiper-slide">
+                                <a class="goods__item-link" href="#">
+                                    <img class="goods__image" src="./images/goods/good-1.png" alt="good">
+                                    <span class="goods__name">
+                                        Teddy Bear
+                                    </span>
+                                    <span class="goods__price">
+                                        $ 30.00 USD
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="goods__item swiper-slide">
+                                <a class="goods__item-link" href="#">
+                                    <img class="goods__image" src="./images/goods/good-2.png" alt="good">
+                                    <span class="goods__name">
+                                        Mega Plush Toy
+                                    </span>
+                                    <span class="goods__price">
+                                        $ 30.00 USD
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="goods__item swiper-slide">
+                                <a class="goods__item-link" href="#">
+                                    <img class="goods__image" src="./images/goods/good-3.png" alt="good">
+                                    <span class="goods__name">
+                                        Cute Dog
+                                    </span>
+                                    <span class="goods__price">
+                                        $ 24.00 USD
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="goods__item swiper-slide">
+                                <a class="goods__item-link" href="#">
+                                    <img class="goods__image" src="./images/goods/good-4.png" alt="good">
+                                    <span class="goods__name">
+                                        Little Friend
+                                    </span>
+                                    <span class="goods__price">
+                                        $ 38.00 USD
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="goods__item swiper-slide">
+                                <a class="goods__item-link" href="#">
+                                    <img class="goods__image" src="./images/goods/good-4.png" alt="good">
+                                    <span class="goods__name">
+                                        Little Friend
+                                    </span>
+                                    <span class="goods__price">
+                                        $ 38.00 USD
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="goods__second">
+                    <div class="goods__nav">
+                        <h3 class="goods__title title-3">
+                            Wooden Toys
+                        </h3>
+                        <a class="goods__link" href="#">
+                            See All Toys
+                        </a>
+                    </div>
+                    <div class="goods__swiper swiper">
+                        <div class="goods__items swiper-wrapper">
+                            <div class="goods__item swiper-slide">
+                                <a class="goods__item-link" href="#">
+                                    <img class="goods__image" src="./images/goods/good-5.png" alt="good">
+                                    <span class="goods__name">
+                                        Teddy Bear
+                                    </span>
+                                    <span class="goods__price">
+                                        $ 30.00 USD
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="goods__item swiper-slide">
+                                <a class="goods__item-link" href="#">
+                                    <img class="goods__image" src="./images/goods/good-6.png" alt="good">
+                                    <span class="goods__name">
+                                        Mega Plush Toy
+                                    </span>
+                                    <span class="goods__price">
+                                        $ 30.00 USD
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="goods__item swiper-slide">
+                                <a class="goods__item-link" href="#">
+                                    <img class="goods__image" src="./images/goods/good-7.png" alt="good">
+                                    <span class="goods__name">
+                                        Cute Dog
+                                    </span>
+                                    <span class="goods__price">
+                                        $ 24.00 USD
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="goods__item swiper-slide">
+                                <a class="goods__item-link" href="#">
+                                    <img class="goods__image" src="./images/goods/good-1.png" alt="good">
+                                    <span class="goods__name">
+                                        Cute Dog
+                                    </span>
+                                    <span class="goods__price">
+                                        $ 24.00 USD
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="goods__item swiper-slide">
+                                <a class="goods__item-link" href="#">
+                                    <img class="goods__image" src="./images/goods/good-8.png" alt="good">
+                                    <span class="goods__name">
+                                        Little Friend
+                                    </span>
+                                    <span class="goods__price">
+                                        $ 38.00 USD
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <section class="story" style="background-image: url('./images/video-bg.jpg');">
+            <div class="container">
+                <div class="story__inner">
+                    <h2 class="story__title">
+                        About The Shop
+                        <span class="story__subtitle">
+                            Watch Our Story
+                        </span>
+                    </h2>
+
+                    <div class="story__text">
+                        There is no magic formula to write perfect ad copy. It is based on a number of factors,
+                        including ad
+                        placement, demographic, even the consumer’s mood.
+                    </div>
+
+                    <a class="story__btn" href="https://youtu.be/k9-QUWtTQZA" data-lity>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="webflow">
+            <div class="container">
+                <h2 class="webflow__title">
+                    <span class="webflow__subtitle">
+                        Made for Webflow
+                    </span>
+                    Simple & Colorful Ecommerce Template for Your Business
+                </h2>
+                <div class="webflow__content">
+                    <div class="webflow__info">
+                        <span class="webflow__info-title">
+                            Available for FREE!
+                        </span>
+                        <div class="webflow__text">
+                            <p>
+                                A successful marketing plan relies heavily on the pulling-power of advertising copy.
+                                Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince
+                                consumers to take action. There is no magic formula to write perfect ad copy
+                            </p>
+                        </div>
+                        <a class="webflow__link" href="#">
+                            GET IT NOW!
+                        </a>
+                    </div>
+                    <div class="webflow__image">
+                        <img src="./images/webflow/img.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="subscribe">
+            <div class="container">
+                <div class="subscribe__inner">
+                    <div class="subscribe__info">
+                        <img src="./images/subscribe.png" alt="subscribe">
+                        <p class="subscribe__info-text">
+                            Subscribe to our newsletter
+                            & get
+                            <span>10% discount!</span>
+                        </p>
+                    </div>
+                    <form class="subscribe__form" action="#">
+                        <input class="subscribe__form-input" type="mail" name="email" placeholder="Email">
+                        <button class="subscribe__btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <section class="media">
+            <div class="container">
+                <div class="media__inner">
+                    <h2 class="media__title">
+                        <span>@ElasticThemes</span>
+                        We're on Instagram!
+                    </h2>
+                    <ul class="media__list">
+                        <li class="media__item">
+                            <img class="media__image" src="./images/instagram/1.jpg" alt="">
+                        </li>
+                        <li class="media__item">
+                            <img class="media__image" src="./images/instagram/2.jpg" alt="">
+                        </li>
+                        <li class="media__item">
+                            <img class="media__image" src="./images/instagram/3.jpg" alt="">
+                        </li>
+                        <li class="media__item">
+                            <img class="media__image" src="./images/instagram/4.jpg" alt="">
+                        </li>
+                        <li class="media__item">
+                            <img class="media__image" src="./images/instagram/5.jpg" alt="">
+                        </li>
+                        <li class="media__item">
+                            <img class="media__image" src="./images/instagram/6.jpg" alt="">
+                        </li>
+                    </ul>
+                    <button class="media__link open-media-modal" type="button">See More Photos</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="media-modal">
+            <div class="media-modal__body">
+                <img class="media-modal__image" src="./images/instagram/1.jpg" alt="">
+                <img class="media-modal__image" src="./images/instagram/2.jpg" alt="">
+                <img class="media-modal__image" src="./images/instagram/3.jpg" alt="">
+                <img class="media-modal__image" src="./images/instagram/4.jpg" alt="">
+                <img class="media-modal__image" src="./images/instagram/5.jpg" alt="">
+                <img class="media-modal__image" src="./images/instagram/6.jpg" alt="">
+                <img class="media-modal__image" src="./images/instagram/6.jpg" alt="">
+                <img class="media-modal__image" src="./images/instagram/1.jpg" alt="">
+                <img class="media-modal__image" src="./images/instagram/2.jpg" alt="">
+                <img class="media-modal__image" src="./images/instagram/3.jpg" alt="">
+                <img class="media-modal__image" src="./images/instagram/4.jpg" alt="">
+                <img class="media-modal__image" src="./images/instagram/1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <a class="logo footer__logo" href="#">ToStore</a>
+                <ul class="footer-menu">
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="#">
+                            Catalog
+                        </a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="#">
+                            Delivery
+                        </a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="#">
+                            About
+                        </a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="#">
+                            Contacts
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="footer__socials socials">
+                    <li class="socials__item">
+                        <a class="socials__link" href="#">
+                            <svg width="14" height="12" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.75 1.67606C13.2533 1.89544 12.7195 2.04506 12.1593 2.11088C12.7308 1.76831 13.1701 1.2255 13.3765 0.579187C12.8427 0.895875 12.2493 1.1265 11.6187 1.25194C11.113 0.713625 10.3924 0.375 9.59706 0.375C8.06763 0.375 6.82619 1.61644 6.82619 3.14587C6.82619 3.36356 6.85037 3.5745 6.89875 3.77644C4.59644 3.66225 2.55512 2.55919 1.1905 0.882375C0.950875 1.29131 0.81475 1.76831 0.81475 2.27569C0.81475 3.23587 1.30244 4.08413 2.04719 4.58081C1.59269 4.56506 1.16631 4.44244 0.792813 4.23319C0.792813 4.24669 0.792813 4.25738 0.792813 4.26863C0.792813 5.61131 1.74625 6.73181 3.01412 6.98438C2.78125 7.04794 2.53713 7.08338 2.28456 7.08338C2.10681 7.08338 1.93075 7.06594 1.76369 7.03275C2.11525 8.13356 3.13956 8.93344 4.35006 8.95762C3.40281 9.70012 2.2075 10.1417 0.9115 10.1417C0.687063 10.1417 0.467688 10.1287 0.25 10.1023C1.47625 10.8892 2.93088 11.3482 4.49519 11.3482C9.59031 11.3482 12.3769 7.12725 12.3769 3.4665C12.3769 3.34781 12.3724 3.22688 12.3679 3.10819C12.9085 2.71725 13.3787 2.22956 13.75 1.67606Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link" href="#">
+                            <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.94478 13.75V8.84644H10.6077L10.8559 6.98208H8.94478V5.77469C8.94478 5.22426 9.09424 4.85139 9.89293 4.85139H10.9375V3.13352C10.7611 3.11133 10.144 3.0625 9.44096 3.0625C7.97253 3.0625 6.98019 3.95473 6.98019 5.57494V6.98208H5.3125V8.84644H6.97979L6.97655 13.75H1.375C0.759766 13.75 0.25 13.2402 0.25 12.625V1.375C0.25 0.759766 0.759766 0.25 1.375 0.25H12.625C13.2402 0.25 13.75 0.759766 13.75 1.375V12.625C13.75 13.2402 13.2402 13.75 12.625 13.75H8.94478Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link" href="#">
+                            <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.25 4.1457C0.25 1.99416 1.99415 0.25 4.1457 0.25H9.8543C12.0058 0.25 13.75 1.99415 13.75 4.1457V9.8543C13.75 12.0058 12.0059 13.75 9.8543 13.75H4.1457C1.99416 13.75 0.25 12.0059 0.25 9.8543V4.1457ZM1.47198 4.26189V9.73811C1.47198 11.2812 2.72107 12.528 4.26189 12.528H9.73811C11.2812 12.528 12.528 11.2789 12.528 9.73811V4.26189C12.528 2.71876 11.2789 1.47198 9.73811 1.47198H4.26189C2.71876 1.47198 1.47198 2.72107 1.47198 4.26189ZM7 10.4332C5.1039 10.4332 3.56681 8.8961 3.56681 7C3.56681 5.1039 5.1039 3.56681 7 3.56681C8.8961 3.56681 10.4332 5.1039 10.4332 7C10.4332 8.8961 8.8961 10.4332 7 10.4332ZM7 9.21121C8.22122 9.21121 9.21121 8.22122 9.21121 7C9.21121 5.77878 8.22122 4.78879 7 4.78879C5.77878 4.78879 4.78879 5.77878 4.78879 7C4.78879 8.22122 5.77878 9.21121 7 9.21121ZM10.5496 4.2069C10.0996 4.2069 9.73491 3.84216 9.73491 3.39224C9.73491 2.94232 10.0996 2.57759 10.5496 2.57759C10.9995 2.57759 11.3642 2.94232 11.3642 3.39224C11.3642 3.84216 10.9995 4.2069 10.5496 4.2069Z" />
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link" href="#">
+                            <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_1_40" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="14" height="14">
+                                    <path
+                                        d="M7 0.25C3.27124 0.25 0.25 3.27124 0.25 7C0.25 9.86084 2.02979 12.302 4.54126 13.2864C4.48193 12.7524 4.427 11.9329 4.56323 11.3484C4.68628 10.8232 5.35425 7.99316 5.35425 7.99316C5.35425 7.99316 5.1543 7.58887 5.1543 6.99121C5.1543 6.05298 5.69702 5.35205 6.37378 5.35205C6.94946 5.35205 7.22852 5.78491 7.22852 6.30347C7.22852 6.88354 6.85938 7.74927 6.66821 8.55127C6.51001 9.22363 7.00659 9.77075 7.66797 9.77075C8.86768 9.77075 9.79053 8.50513 9.79053 6.6792C9.79053 5.06421 8.63037 3.93481 6.97144 3.93481C5.05102 3.93481 3.92383 5.37402 3.92383 6.86377C3.92383 7.44385 4.14795 8.06567 4.427 8.40405C4.48193 8.46997 4.48853 8.5293 4.47315 8.59741C4.42041 8.81055 4.30835 9.26978 4.28638 9.36206C4.25562 9.4873 4.1875 9.51367 4.06006 9.45215C3.21631 9.06104 2.68897 7.82837 2.68897 6.8374C2.68897 4.70825 4.23584 2.75269 7.14941 2.75269C9.4917 2.75269 11.311 4.42041 11.311 6.65283C11.311 8.97754 9.84326 10.8496 7.80859 10.8496C7.12524 10.8496 6.48145 10.4958 6.26172 10.0762C6.26172 10.0762 5.92334 11.3638 5.83984 11.6802C5.68823 12.2668 5.27734 13.0007 5.00049 13.449C5.6333 13.6445 6.30347 13.75 7 13.75C10.7288 13.75 13.75 10.7288 13.75 7C13.75 3.27124 10.7288 0.25 7 0.25Z" />
+                                </mask>
+                                <g mask="url(#mask0_1_40)">
+                                    <path
+                                        d="M7 0.25C3.27124 0.25 0.25 3.27124 0.25 7C0.25 9.86084 2.02979 12.302 4.54126 13.2864C4.48193 12.7524 4.427 11.9329 4.56323 11.3484C4.68628 10.8232 5.35425 7.99316 5.35425 7.99316C5.35425 7.99316 5.1543 7.58887 5.1543 6.99121C5.1543 6.05298 5.69702 5.35205 6.37378 5.35205C6.94946 5.35205 7.22852 5.78491 7.22852 6.30347C7.22852 6.88354 6.85938 7.74927 6.66821 8.55127C6.51001 9.22363 7.00659 9.77075 7.66797 9.77075C8.86768 9.77075 9.79053 8.50513 9.79053 6.6792C9.79053 5.06421 8.63037 3.93481 6.97144 3.93481C5.05102 3.93481 3.92383 5.37402 3.92383 6.86377C3.92383 7.44385 4.14795 8.06567 4.427 8.40405C4.48193 8.46997 4.48853 8.5293 4.47315 8.59741C4.42041 8.81055 4.30835 9.26978 4.28638 9.36206C4.25562 9.4873 4.1875 9.51367 4.06006 9.45215C3.21631 9.06104 2.68897 7.82837 2.68897 6.8374C2.68897 4.70825 4.23584 2.75269 7.14941 2.75269C9.4917 2.75269 11.311 4.42041 11.311 6.65283C11.311 8.97754 9.84326 10.8496 7.80859 10.8496C7.12524 10.8496 6.48145 10.4958 6.26172 10.0762C6.26172 10.0762 5.92334 11.3638 5.83984 11.6802C5.68823 12.2668 5.27734 13.0007 5.00049 13.449C5.6333 13.6445 6.30347 13.75 7 13.75C10.7288 13.75 13.75 10.7288 13.75 7C13.75 3.27124 10.7288 0.25 7 0.25Z" />
+                                </g>
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link" href="#">
+                            <svg width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_1_26" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="16" height="12">
+                                    <path
+                                        d="M8 0.375C10.1184 0.375 11.9904 0.594938 13.1328 0.762C14.0778 0.900375 14.84 1.61194 15.0138 2.55469C15.1629 3.35906 15.3125 4.53469 15.3125 6C15.3125 7.46531 15.1606 8.64094 15.0138 9.44531C14.84 10.3881 14.0778 11.1019 13.1328 11.238C11.9859 11.4051 10.1071 11.625 8 11.625C5.89288 11.625 4.01413 11.4051 2.86719 11.238C1.92219 11.1019 1.16 10.3881 0.986187 9.44531C0.839375 8.64319 0.6875 7.46981 0.6875 6C0.6875 4.53019 0.839375 3.35681 0.986187 2.55469C1.16 1.61194 1.92219 0.900375 2.86719 0.762C4.00962 0.594938 5.88163 0.375 8 0.375ZM6.3125 2.78306V9.21694L7.15625 8.74219L11.0938 6.49219L11.9375 6L11.0938 5.50781L7.15625 3.25781L6.3125 2.78306Z" />
+                                </mask>
+                                <g mask="url(#mask0_1_26)">
+                                    <path
+                                        d="M8 0.375C10.1184 0.375 11.9904 0.594938 13.1328 0.762C14.0778 0.900375 14.84 1.61194 15.0138 2.55469C15.1629 3.35906 15.3125 4.53469 15.3125 6C15.3125 7.46531 15.1606 8.64094 15.0138 9.44531C14.84 10.3881 14.0778 11.1019 13.1328 11.238C11.9859 11.4051 10.1071 11.625 8 11.625C5.89288 11.625 4.01413 11.4051 2.86719 11.238C1.92219 11.1019 1.16 10.3881 0.986187 9.44531C0.839375 8.64319 0.6875 7.46981 0.6875 6C0.6875 4.53019 0.839375 3.35681 0.986187 2.55469C1.16 1.61194 1.92219 0.900375 2.86719 0.762C4.00962 0.594938 5.88163 0.375 8 0.375ZM6.3125 2.78306V9.21694L7.15625 8.74219L11.0938 6.49219L11.9375 6L11.0938 5.50781L7.15625 3.25781L6.3125 2.78306Z" />
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__bottom">
+                <span>Created with love by Elastic Themes</span>
+                <ul class="footer__bottom-list">
+                    <li class="footer__bottom-item">
+                        Powered byWebflow
+                    </li>
+
+                    <li class="footer__bottom-item">
+                        Style Guide
+                    </li>
+
+                    <li class="footer__bottom-item">
+                        Licensing
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./js/lity.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+.webflow {
+    padding: 60px 0;
+
+    &__title {
+        margin: 0 auto 95px;
+        max-width: 450px;
+        text-align: center;
+    }
+
+    &__subtitle {
+        display: block;
+        font-weight: 400;
+        font-weight: 400;
+        margin-bottom: 16px;
+        font-size: 13px;
+        line-height: 1.2;
+        color: #A5C926;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        padding-right: 15px;
+    }
+
+    &__image {
+        width: 567px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__info-title {
+        display: block;
+        position: relative;
+        font-size: 31px;
+        line-height: 1.29;
+        padding-bottom: 24px;
+        margin-bottom: 51px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: #A5C926;
+        }
+    }
+
+    &__text {
+        margin-bottom: 26px;
+        max-width: 450px;
+        color: #999999;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 12px 28px;
+        text-transform: uppercase;
+        background-color: #A5C926;
+        color: #fff;
+        border-radius: 24px;
+
+        transition: color 0.2s ease-in-out;
+
+        &:focus,
+        &:hover,
+        &:active {
+            color: #000;
+        }
+    }
+}

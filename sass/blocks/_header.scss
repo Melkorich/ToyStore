@@ -1,0 +1,46 @@
+.header {
+
+    &__top {
+        padding: 8px 10px;
+        background-color: #A5C926;
+    }
+
+    &__top-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__top-links {
+        display: flex;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    &__top-link:first-child {
+        margin-right: 20px;
+    }
+
+    &__top-link a {
+        outline: none;
+        transition: color 0.2s ease-in-out;
+
+        &:focus,
+        &:hover,
+        &:active {
+            color: #000;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav {
+        padding: 20px 15px;
+        background-color: #FFFFFF;
+    }
+}

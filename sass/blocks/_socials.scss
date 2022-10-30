@@ -1,0 +1,26 @@
+.socials {
+    display: flex;
+    align-items: center;
+
+    &__item:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    &__link {
+        outline: none;
+        fill: #fff;
+        transition: fill 0.3s ease-in-out;
+
+        &:focus,
+        &:hover,
+        &:active {
+            fill: #000;
+        }
+    }
+
+    &__link svg,
+    &__link img {
+        width: 14px;
+        height: 14px;
+    }
+}

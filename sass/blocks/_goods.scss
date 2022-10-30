@@ -1,0 +1,108 @@
+.goods {
+    padding: 60px 0;
+
+    &__first {
+        padding-bottom: 75px;
+    }
+
+    &__second {
+        padding-top: 60px;
+    }
+
+
+    &__nav {
+        position: relative;
+        // padding-bottom: 36px;
+        margin-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // border-bottom: 2px solid #ddd;
+
+        // &::before {
+        //     position: absolute;
+        //     content: '';
+        //     height: 2px;
+        //     width: 136px;
+        //     background-color: #A5c926;
+        //     left: 0;
+        //     bottom: -2px;
+        // }
+    }
+
+    &__link {
+        position: relative;
+        padding-bottom: 4px;
+        padding-right: 20px;
+        border-bottom: 2px solid #ddd;
+
+        &::after {
+            position: absolute;
+            content: '';
+            background-image: url('./../images/arrow-right.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 14px;
+            height: 11px;
+            top: 4px;
+            right: 0;
+        }
+    }
+
+    &__items {
+        // display: flex;
+        // flex-wrap: wrap;
+        // margin: 0 -15px;
+        padding-top: 55px;
+        min-width: 0;
+    }
+
+    &__item {
+        display: flex;
+        // padding: 0 15px;
+        min-width: 0;
+    }
+
+    &__item-link {
+        display: flex;
+        flex-direction: column;
+        padding: 29px 44px;
+        min-width: 270px;
+        // min-height: 328px;
+        text-align: center;
+
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+
+        background-color: #fff;
+    }
+
+    &__name {
+        display: block;
+        margin-bottom: 12px;
+        flex: 1 1 auto;
+    }
+
+    &__price {
+        display: inline-block;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 6px 12px;
+        background-color: #A5c926;
+        border-radius: 16px;
+        color: #fff;
+
+        font-size: 12px;
+        line-height: 1.66;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    &__image {
+        margin-bottom: 25px;
+        width: 182px;
+        height: 182px;
+        object-fit: cover;
+    }
+}
