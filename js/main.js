@@ -49,46 +49,57 @@ const modal = document.querySelector('.modal');
 const openModal = document.querySelector('.open-modal');
 const modalOverlay = document.querySelector('.modal__overlay');
 
-const modalTwo = document.querySelector('.media-modal');
-const openMediaModal = document.querySelector('.open-media-modal');
+const modalList = document.querySelector('.modal__list');
+
+const modal2 = document.querySelector('.modal-2');
+const openModal2 = document.querySelector('.open-modal-2');
+const modal2bg = document.querySelector('.modal-2__bg');
+
+const openModalfunction = function () {
+    body.classList.add('no-scroll');
+    modalOverlay.classList.remove('hidden');
+}
+
+const closeModalfunction = function () {
+    body.classList.remove('no-scroll');
+    modalOverlay.classList.add('hidden');
+}
 
 openModal.addEventListener('click', function () {
     modal.classList.remove('hidden');
-    modalOverlay.classList.remove('hidden');
-    body.classList.add('no-scroll');
+    openModalfunction();
+    modalList.classList.add('modal__list--active');
 });
 
-openMediaModal.addEventListener('click', function () {
-    modalTwo.classList.add('media-modal__active');
-    modalOverlay.classList.remove('hidden');
+
+openModal2.addEventListener('click', function () {
+    modal2.classList.add('modal-2__active');
     body.classList.add('no-scroll');
 });
 
 modalOverlay.addEventListener('click', function () {
     modal.classList.add('hidden');
-    modalOverlay.classList.add('hidden');
-    body.classList.remove('no-scroll');
+    closeModalfunction();
+    modalList.classList.remove('modal__list--active');
 });
 
-modalOverlay.addEventListener('click', function () {
-    modalTwo.classList.remove('media-modal__active');
-    modalOverlay.classList.add('hidden');
-    body.classList.remove('no-scroll');
+modal2bg.addEventListener('click', function () {
+    closeModalfunction();
+    modal2.classList.remove('modal-2__active');
 });
 
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
         modal.classList.add('hidden');
-        modalOverlay.classList.add('hidden');
-        body.classList.remove('no-scroll');
+
+        closeModalfunction();
     }
 })
 
-document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !modalTwo.classList.contains('hidden')) {
-        modalTwo.classList.remove('media-modal__active');
-        modalOverlay.classList.add('hidden');
-        body.classList.remove('no-scroll');
+window.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal2.classList.contains('modal-2__active')) {
+        modal2.classList.remove('modal-2__active');
+        closeModalfunction();
     }
 })
 

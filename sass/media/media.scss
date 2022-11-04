@@ -68,7 +68,7 @@
         margin: 0 auto 35px;
     }
 
-    .media-modal__body {
+    .modal-2__content {
         grid-template-columns: repeat(5, 1fr);
     }
 
@@ -263,7 +263,7 @@
         align-items: start;
     }
 
-    .media-modal__body {
+    .modal-2__content {
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -322,7 +322,7 @@
         min-width: 160px !important;
     }
 
-    .media-modal__body {
+    .modal-2__content {
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -413,8 +413,7 @@
 
     }
 
-    .media-modal__body {
+    .modal-2__content {
         grid-template-columns: repeat(2, 1fr);
-        overflow: auto;
     }
 }
